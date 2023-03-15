@@ -44,12 +44,8 @@ const { createApp } = Vue
                 this.activeImage = 0;
             }
         },
-        currentImage(index){
-            if(this.activeImage == index){
-                return 'active';
-            }else{
-                return '';
-            }
+        changeImage(index){
+            this.activeImage = index
         },
         autoPlay(){
 
