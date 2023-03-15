@@ -19,15 +19,15 @@
                 <div class="item">
                     <img :src="slides[activeImage].image" :alt="slides.title" />
                     <div class="text">
-                        <h3></h3>
-                        <p></p>
+                        <h3 :title="slides[activeImage].title">{{slides[activeImage].title}}</h3>
+                        <p :title="slides[activeImage].text">{{slides[activeImage].text}}</p>
                     </div>
                 </div>
 
                 <div class="thumbs">
                     <div class="prev" @click="goToPrev"></div>
                     <div class="next" @click="goToNext"></div>
-                    <div class="thumb" v-for="(image, index) in slides" :class="currentImage(index)"  >
+                    <div class="thumb" v-for="(image, index) in slides" :class="currentImage(index)">
                         <img :src="image['image']"/>
                     </div>
                 </div>
