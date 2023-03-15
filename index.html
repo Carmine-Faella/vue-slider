@@ -27,8 +27,8 @@
                 <div class="thumbs">
                     <div class="prev" @click="goToPrev"></div>
                     <div class="next" @click="goToNext"></div>
-                    <div class="thumb" v-for="(image, index) in slides" >
-                        <img :src="image['image']" />
+                    <div class="thumb" v-for="(image, index) in slides" :class="currentImage(index)"  >
+                        <img :src="image['image']"/>
                     </div>
                 </div>
 

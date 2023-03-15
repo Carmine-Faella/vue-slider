@@ -42,6 +42,13 @@ const { createApp } = Vue
             if(this.activeImage == this.slides.length){
                 this.activeImage = 0;
             }
+        },
+        currentImage(index){
+            if(this.activeImage == index){
+                return 'active'
+            }else{
+                return ''
+            }
         }
     }
   }).mount('#app')
