@@ -48,14 +48,11 @@ const { createApp } = Vue
             this.activeImage = index
         },
         autoPlay(){
-
             this.hover = setInterval(this.goToNext,3000); 
-
         },
         stop(){
-
             clearInterval(this.hover);
+            this.hover='';
         }
-        
     }
-  }).mount('#app')
+}).mount('#app')
